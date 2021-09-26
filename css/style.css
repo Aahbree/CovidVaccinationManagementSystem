@@ -1,0 +1,113 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    overflow: auto;
+}
+
+#videoBG {
+    position: fixed;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #videoBG {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-1 {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 30%;
+    padding: 30px 20px;
+    background-color: none;
+}
+
+.card-1 h1 {
+    font-weight: bolder;
+}
+
+#part2 {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(24, 2, 2, 0.3);
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: 5%;
+}
+
+
+/* Full-width input fields */
+
+.login-form input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.img-container {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .details label {
+        font-size: 18px;
+    }
+}
+
+.details input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.submit-btn .btn {
+    background-color: green;
+    padding: 10px 30px;
+}
+
+.submit-btn .btn:hover {
+    background-color: rgb(14, 177, 14);
+}
+
+@media(max-width:450px) {
+    .details input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+}

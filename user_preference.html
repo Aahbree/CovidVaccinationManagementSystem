@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  text-align: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 6px;
+  margin-top: 25px;
+
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.col-50 {
+  float: left;
+  margin-top: 25px;
+  margin-left: 30%;
+  margin-bottom: 250px;
+}
+
+.checkboxes {
+  float: left;
+  padding: 12px 12px 12px 0;
+  margin-top: 1px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  font-size: large;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+</style>
+</head>
+<body>
+
+<center> 
+<h1>Time Slot Preference</h1>
+<h2>Patient Preference Page</h2>
+</center>
+
+<div class="container">
+<form action="user_preference.php" method="POST">
+<center>
+    <table>
+        <tr>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+
+        <tr>
+        <td><input type="checkbox" id="monday" name="monday[]" value="8" ><label>8-10</label></td>
+        <td><input type="checkbox" id="tuesday" name="tuesday[]" value="8"><label>8-10</label></td>
+        <td><input type="checkbox" id="wednesday" name="wednesday[]" value="8"><label>8-10</label></td>
+        <td><input type="checkbox" id="thursday" name="thursday[]" value="8"><label>8-10</label></td>
+        <td><input type="checkbox" id="friday" name="friday[]" value="8"><label>8-10</label></td>
+        <td><input type="checkbox" id="saturday" name="saturday[]" value="8"><label>8-10</label></td>
+        <td><input type="checkbox" id="sunday" name="sunday[]" value="8"><label>8-10</label></td>
+        </tr>
+		
+		<tr>
+        <td><input type="checkbox" id="monday" name="monday[]" value="10" ><label>10-12</label></td>
+        <td><input type="checkbox" id="tuesday" name="tuesday[]" value="10"><label>10-12</label></td>
+        <td><input type="checkbox" id="wednesday" name="wednesday[]" value="10"><label>10-12</label></td>
+        <td><input type="checkbox" id="thursday" name="thursday[]" value="10"><label>10-12</label></td>
+        <td><input type="checkbox" id="friday" name="friday[]" value="10"><label>10-12</label></td>
+        <td><input type="checkbox" id="saturday" name="saturday[]" value="10"><label>10-12</label></td>
+        <td><input type="checkbox" id="sunday" name="sunday[]" value="10"><label>10-12</label></td>
+        </tr>
+
+
+        <tr>
+        <td><input type="checkbox" id="monday" name="monday[]" value="12" ><label>12-2</label></td>
+        <td><input type="checkbox" id="tuesday" name="tuesday[]" value="12"><label>12-2</label></td>
+        <td><input type="checkbox" id="wednesday" name="wednesday[]" value="12"><label>12-2</label></td>
+        <td><input type="checkbox" id="thursday" name="thursday[]" value="12"><label>12-2</label></td>
+        <td><input type="checkbox" id="friday" name="friday[]" value="12"><label>12-2</label></td>
+        <td><input type="checkbox" id="saturday" name="saturday[]" value="12"><label>12-2</label></td>
+        <td><input type="checkbox" id="sunday" name="sunday[]" value="12"><label>12-2</label></td>
+        </tr>
+
+        <tr>
+        <td><input type="checkbox" id="monday" name="monday[]" value="2" ><label>2-4</label></td>
+        <td><input type="checkbox" id="tuesday" name="tuesday[]" value="2"><label>2-4</label></td>
+        <td><input type="checkbox" id="wednesday" name="wednesday[]" value="2"><label>2-4</label></td>
+        <td><input type="checkbox" id="thursday" name="thursday[]" value="2"><label>2-4</label></td>
+        <td><input type="checkbox" id="friday" name="friday[]" value="2"><label>2-4</label></td>
+        <td><input type="checkbox" id="saturday" name="saturday[]" value="2"><label>2-4</label></td>
+        <td><input type="checkbox" id="sunday" name="sunday[]" value="2"><label>12-2</label></td>
+        </tr>
+
+        <tr>
+        <td><input type="checkbox" id="monday" name="monday[]" value="4" ><label>4-6</label></td>
+        <td><input type="checkbox" id="tuesday" name="tuesday[]" value="4"><label>4-6</label></td>
+        <td><input type="checkbox" id="wednesday" name="wednesday[]" value="4"><label>4-6</label></td>
+        <td><input type="checkbox" id="thursday" name="thursday[]" value="4"><label>4-6</label></td>
+        <td><input type="checkbox" id="friday" name="friday[]" value="4"><label>4-6</label></td>
+        <td><input type="checkbox" id="saturday" name="saturday[]" value="4"><label>4-6</label></td>
+        <td><input type="checkbox" id="sunday" name="sunday[]" value="12"><label>4-6</label></td>
+        </tr>
+      </table>
+      
+  <div class="col-50">
+  <input type="submit" value="Submit">
+  </div>
+  </form>
+</center>
+</div>
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<html>
+<style>
+   .col-50 {
+      float: left;
+      margin-top: -20px;
+      margin-left: 11%;
+      margin-bottom: 250px;
+   }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<script>
+   $(document).ready(function () {
+      $('#addbtn').click(function () {
+            
+            var time = $("#time").val();
+            var date = $("#date").val();
+            console.log(date);
+            console.log(time);
+            if(time.length <= 1 &&  date.length <= 1){
+               return;
+            }
+            $('#schedules').append("<tr><td><input type=\"text\" name=\"pslots[]\" value=\"" + date + " " + time + "\"/></td><tr>");
+            $("#time").val(' ');
+            $("#date").val(' ');
+      });
+   });
+</script>
+</script>
+
+<h2>
+   <center>
+   <a href="#" id="addSchedule">UPLOAD APPOINTMENTS</a>
+   <br>
+   </center>
+</h2>
+
+<div class="container">
+   <div class="panel panel-primary">
+      <div class="panel-heading">Schedule an Appointment</div>
+      <br>
+      <div class="panel-body">
+         <div class='col-md-6'>
+            <div class="form-group">
+               <label class="control-label">Select Appointment Date and Time</label>
+               <br>
+               <!-- <div class='input-group date' id='datetimepicker'>
+                  <input type='text' class="form-control" id="value_select" />
+                  <span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+                
+               </div> -->
+               <br>
+               <input type="date" id="date" name="date" min="2021-08-01" max="2021-08-31" required>
+               <input type="time" id="time" name="time" step="3600" min="8:00" max="18:00" required>
+               <br><br>
+               <button type="button" class="btn btn-primary" id="addbtn">ADD</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="col-50">
+   <form action="schedules_provider.php" id="schedulesList" method="POST">
+      <table class="table">
+         <tbody id="schedules">
+         </tbody>
+      </table>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+<form action="welcomep.php" id="schedulesList1" method="POST">
+      <button type="submit" class="btn btn-primary">GO back</button>
+   </form>
+	
+	
+</div>
+
+</html>
