@@ -182,7 +182,7 @@ function loadMap() {
 }
 </script>
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIyIkaBqCkgIRFgsR8mS64WCS6FmtnhTw&callback=loadMap">
+    src="https://maps.googleapis.com/maps/api/js?key=GAPIKey&callback=loadMap">
 </script>
 </html>
 
